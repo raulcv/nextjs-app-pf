@@ -1,65 +1,68 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+// import Document, { Html, Head, Main, NextScript } from 'next/document'
+// import Main from "next/Main";
+import styles from "../styles/Home.module.scss";
+import Image from "next/image";
+import Navigation from "../components/Navigation/navbar";
+import HomeSection from "../components/Sections/homesection";
+import AboutSection from "../components/Sections/aboutSection";
+import SkillsSection from "../components/Sections/skillsSection";
 
-export default function Home() {
+function Index({ data }) {
+
+  console.log(data);
+  let MainUrl = "http://localhost:1337";
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Principal page</title>
+        <meta property="og:title" content="Principal page" key="title" />
+        <link rel="icon" href="/logo.svg"></link>
       </Head>
-
+      <header>
+        <Navigation />
+      </header>
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+        <HomeSection/>
+        <AboutSection/>
+        <SkillsSection/>
+        <div>
+          <Image
+            src="/vercel.svg"
+            width={400}
+            alt="Main image"
+            height={400}
+          ></Image>
         </div>
-      </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+        <ul>
+          {data.map((dato) => (
+            <li key={dato.id}>
+              {dato.Nombre} {dato.Orden}
+              <div>
+                <img
+                  src={`${MainUrl}${dato.Imagen[0].url}`}
+                  alt="Picture of the Tecnology"
+                  width={200}
+                  height={200}
+                ></img>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </main>
+    </>
+  );
 }
+
+export async function getServerSideProps() {
+  // // Fetch data from external API
+  // const res = await fetch(`http://localhost:1337/tablas`);
+  // const data = await res.json();
+  const data = [];
+  console.log(data);
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
+export default Index;

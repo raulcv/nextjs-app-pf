@@ -1,0 +1,16 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+// @import 'base.scss';  
+  .dark_theme {
+    /* HSL color mode */
+    $dark-first-color-second: hsl($hue-color, 30%, 8%);
+    $dark-title-color: hsl($hue-color, 8%, 95%);
+    $dark-text-color: hsl($hue-color, 8%, 75%);
+    $dark-input-color: hsl($hue-color, 29%, 16%);
+    $dark-body-color: hsl($hue-color, 28%, 12%);
+    $dark-container-color: hsl($hue-color, 29%, 16%);
+    $dark-scroll-bar-color: hsl($hue-color, 12%, 48%);
+    $dark-scroll-thumb-color: hsl($hue-color, 12%, 36%);
+    $dark-contactame-button: hsl($hue-color, 69%, 61%);
+    $dark-contactame-button-text: #fff;
+    $dark-contactame-button-color: $first-color-alt;
+  }
