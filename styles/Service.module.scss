@@ -1,0 +1,91 @@
+@import "variables";
+@import "reusable";
+/*==================== SERVICES ====================*/
+.service {
+  @extend %section;
+}
+.service__container {
+  @extend %container;
+  @extend %grid;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+  }
+}
+.service__content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 3.5rem 0.5rem 1.25rem 1.5rem;
+  @extend %cardContent;
+  min-height: 400px;
+}
+.service__icon {
+  display: block;
+  color: var(--first-color);
+  margin-bottom: var(--mb-1);
+  svg {
+    @extend %big__svg;
+  }
+}
+.service__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+  font-weight: var(--font-medium);
+}
+.service__button {
+  @extend %linkButton;
+}
+.service__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;
+  z-index: var(--z-modal);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.service__modal_content {
+  position: relative;
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  @media screen and (min-width: 768px) {
+    width: 470px;
+  }
+}
+.service__modal_title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  margin: 0 var(--mb-1) var(--mb-1-5) 0;
+}
+.service__modal_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--first-color);
+  cursor: pointer;
+  svg {
+    @extend %normal__svg;
+  }
+  &:hover {
+    color: var(--firt-color-alt);
+  }
+}
+.service__modal_data {
+  @extend %grid;
+  row-gap: 1rem;
+}
+.service__modal_list {
+  display: flex;
+}
+.service__modal_icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-25);
+}

@@ -1,0 +1,66 @@
+/********************** Reusable Clases **************************/
+.section__title {
+  font-size: var(--h1-font-size);
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+  @media screen and (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
+  @extend %container;
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+// @media screen and (max-width: 350px) {
+// }
+// @media screen and (min-width: 351px) {
+// }
+// @media screen and (min-width: 568px) {
+// }
+// @media screen and (min-width: 768px) {
+// }
+// @media screen and (min-width: 1024px) {
+// }
+// @media screen and (min-width: 1440px) {
+// }
+/********************* Buttons **********************/
+.normal__button {
+  @extend %button;
+  @extend %button__flex;
+}
+.normal__button_icon {
+  transition: 0.3s;
+  display: flex;
+}
+.light__Button {
+  @extend %button;
+  @extend %button__flex;
+  background-color: var(--contactame-button);
+  color: var(--contactame-button-text);
+  &:hover {
+    background-color: var(--contactame-button-color);
+  }
+}
+//ICON
+.swiper__right_icon {
+  @extend %swiper__icon;
+  padding-left: 1rem;
+  @media screen and (min-width: 568px) {
+    padding-right: 0;
+  }
+}
+.swiper__left_icon {
+  @extend %swiper__icon;
+  padding-right: 1rem;
+  @media screen and (min-width: 568px) {
+    padding-right: 0;
+  }
+}
+
+//--------------CONATINER ----------------------
+  

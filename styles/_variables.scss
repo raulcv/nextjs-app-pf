@@ -1,0 +1,126 @@
+%section {
+  padding: 2rem 0 4rem;
+  @media screen and (min-width: 768px) {
+    padding: 6rem 0 2rem;
+  }
+}
+%grid {
+  display: grid;
+  gap: 1.5rem;
+}
+%container {
+  max-width: 1050px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+  @media screen and (max-width: 350px) {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 90%;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 1320px;
+  }
+}
+%cardContent {
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgb(0 0 0 / var(--pct-1));
+  transition: 0.3s;
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0 0 0 / var(--pct-2));
+    // background-color: #faf9f8;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 6rem 0 2rem 2.5rem;
+  }
+}
+%button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-medium);
+  column-gap: var(--mb-0-5);
+  &:hover {
+    cursor: pointer;
+    background-color: var(--first-color-alt);
+  }
+  &:disabled {    
+    cursor: default;
+    pointer-events: none
+  }
+  i {
+    @extend %button__flex;
+  }
+  i svg {
+    @extend %smaller__svg;
+  }
+}
+%button__flex {
+  display: inline-flex;
+  align-items: center;
+}
+%img {
+  max-width: 100%;
+  height: auto;
+}
+%icon {
+  font-size: 1.8rem;
+  margin-right: var(--mb-0-25);
+}
+%swiper__icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
+  }
+  svg {
+    @extend %bigger__svg;
+  }
+}
+%linkButton {
+  @extend %button__flex;
+  color: var(--first-color);
+  cursor: pointer;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  &:hover {
+    color: var(--first-color-alt);
+  }
+  &:hover .button__icon {
+    transform: translateX(0.25rem);
+  }
+  i {
+    transition: 0.3s;
+    @extend %button__flex;
+    svg {
+      @extend %small__svg;
+    }
+  }
+}
+%smaller__svg {
+  width: 20px;
+  height: 20px;
+}
+%small__svg {
+  width: 25px;
+  height: 28px;
+}
+%normal__svg {
+  width: 30px;
+  height: 30px;
+}
+%big__svg {
+  width: 40px;
+  height: 40px;
+}
+%bigger__svg {
+  width: 55px;
+  height: 55px;
+}

@@ -1,5 +1,4 @@
 const path = require('path')
-const nextTranslate = require('next-translate')
 const withTM = require('next-transpile-modules')(['@unicorndesign/core', '@unicorndesign/react', '@stencil/core']);
 module.exports = withTM({
   sassOptions: {
@@ -13,5 +12,8 @@ module.exports = withTM({
         HTMLElement: '(class {})'
       }));
     }
-  }
+  },
+  devIndicators: {
+    autoPrerender: false,
+  },
 });

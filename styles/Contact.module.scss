@@ -1,0 +1,73 @@
+@import "variables";
+@import "reusable";
+/*==================== contactS ====================*/
+.contact {
+  @extend %section;
+}
+.contact__container {
+  @extend %container;
+  @extend %grid;
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact__information {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+.contact__icon {
+  color: var(--first-color);
+  margin-right: var(--mb-0-75);
+  svg {
+      @extend %big__svg;
+  }
+}
+
+.contact__title {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+}
+.contact__subtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.contact__form {
+  @extend %grid;
+}
+.contact__group {
+  @extend %grid;
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.contact__content {
+  background-color: var(--input-color);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem 0.25rem;
+}
+.contact__label {
+  font-size: var(--smaller-font-size);
+  color: var(--title-color);
+}
+.contact__input {
+  width: 100%;
+  background-color: var(--input-color);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem 0.5rem 0;
+}
+.contact__input_message {
+  // min-height: 80px;
+  width: 100%;
+  border: none;
+  margin: 8px 0px;
+  resize: none;
+  padding: 0px;
+  padding-bottom: 14px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}

@@ -1,0 +1,109 @@
+@import "variables";
+@import "reusable";
+/*==================== TESTIMONIALS ====================*/
+.testimonial {
+  @extend %section;
+}
+.testimonial__container {
+  @extend %container;
+  @extend %grid;
+  gap: 1.5rem;
+  // grid-template-columns: 1fr;
+  justify-content: left;
+  // @media screen and (min-width: 568px) {
+  //   grid-template-columns: repeat(2, 45%);
+  // }
+  // // @media screen and (min-width: 768px) {
+  // //   grid-template-columns: repeat(3, 32%);
+  // // }
+  // @media screen and (min-width: 1024px) {
+  //   grid-template-columns: repeat(3, 32%);
+  // }
+}
+.testimonial__content {
+  padding: var(--mb-1);
+  overflow: hidden;
+  justify-content: center;
+}
+.testimonial__data {
+  // justify-content: space-between;
+  // margin-bottom: var(--mb-1);
+  display: grid;
+  @media screen and (min-width: 968px) {
+    display: flex;
+    margin-bottom: var(--mb-1);
+  }
+  @media screen and (min-width: 1024px) {
+    display: grid;
+  }
+  @media screen and (min-width: 1440px) {
+    display: flex;
+  }
+}
+.testimonial__header {
+  display: flex;
+}
+
+.testimonial__stars {
+  min-width: 120px;
+  text-align: end;
+  margin: var(--mb-0-5) 0;
+  @media screen and (min-width: 968px) {
+    margin: 0;
+    // text-align: end;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: var(--mb-0-5) 0;
+    // text-align: start;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 0;
+    // text-align: end;
+  }
+  i svg {
+    @extend %smaller__svg;
+    }
+}
+.testimonial__icon_star {
+  color: var(--first-color-alt);
+}
+.testimonial__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: var(--mb-0-75);
+}
+
+.testimonial__name {  
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+.testimonial__relation { 
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+.testimonial__data {
+}
+.testimonial__description {
+  margin-bottom: var(--mb-2-5);
+  font-size: var(--smaller-font-size)
+}
+.testimonial__title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-0-5);
+}
+.testimonial__button {
+  @extend %linkButton;
+}
+
+.swiper__testimonial_icon {
+  font-size: 2rem;
+  color: var(--first-color);
+  @media screen and (min-width: 1024px) {
+    font-size: 3.5rem;
+  }
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+}

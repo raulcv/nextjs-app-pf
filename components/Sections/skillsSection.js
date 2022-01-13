@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { animated, useSpring } from "react-spring";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/Main.module.scss";
+import styles from "../../styles/Skill.module.scss";
 import * as Unicons from "@iconscout/react-unicons";
 
 const SkillBody = () => {
@@ -70,7 +70,6 @@ const SkillBody = () => {
     return <Icon />;
   }
 
-  // console.log(skillState);
   let ListSkills = dataSkills.map((value, idx) => (
     <div key={value.number}>
       {value.data.map((skill, index) => (
@@ -106,31 +105,6 @@ const SkillBody = () => {
 };
 
 class skillsElement extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.skillsContainerRef = React.createRef();
-  //   this.ClickArrow = this.ClickArrow.bind( this );
-  // }
-
-  // ClickArrow(e) {
-  //   e.preventDefault();
-  //   // console.log(e.nativeEvent.path[3].children[1]);
-  //   let skills = this.skillsContainerRef.current.children;
-  //   for (let i = 0; i < skills.length; i++) {
-  //     skills[i].children[1].style.height = '0';
-  //     skills[i].children[1].style.overflow = 'hidden';
-  //   }
-  //   let actualSkill = e.nativeEvent.path[3].children[1];
-
-  //   if(actualSkill.style.overflow === 'hidden') {
-  //     actualSkill.style.height = null;
-  //     actualSkill.style.overflow = null;
-  //   }else{
-  //     actualSkill.style.height = '0';
-  //     actualSkill.style.overflow = 'hidden';
-  //   }
-  // }
-
   render() {
     return (
       <section className={styles.skills} id="skills">

@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import styles from "../../styles/Main.module.scss";
+import styles from "../../styles/About.module.scss";
 import * as Unicons from '@iconscout/react-unicons';
 
 class aboutElement extends React.Component {
@@ -42,8 +42,8 @@ render(){
         </div>
 
         <div className={styles.about__buttons}>
-          <a href="assets/pdf/Alexa-Cv.pdf" className={styles.downloadcv__button}>
-            Descargar CV<i className={styles.button__icon}><Unicons.UilDownloadAlt/></i>
+          <a href="assets/pdf/Alexa-Cv.pdf" className={styles.normal__button}>
+            Descargar CV<i className={styles.normal__button_icon}><Unicons.UilDownloadAlt/></i>
           </a>
         </div>
       </div>

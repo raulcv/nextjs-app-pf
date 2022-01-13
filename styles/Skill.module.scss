@@ -1,0 +1,114 @@
+@import "variables";
+@import "reusable";
+/*==================== Skill ====================*/
+/*==================== Skills ====================*/
+.skills {
+  @extend %section;
+  @media screen and (min-width: 768px) {
+    padding: 6rem 0 2rem;
+  }
+}
+
+.skills__container {
+  @extend %container;
+  @extend %grid;
+  column-gap: 2rem;
+  @media screen and (min-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.skills__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2);
+}
+.skills__icon {
+  margin-right: var(--mb-0-75);
+}
+.skills__icon,
+.skills__arrow {
+  // font-size: 2rem;
+  color: var(--first-color);
+  svg {
+    @extend %big__svg;
+}
+}
+.skills__arrow {
+  margin-left: auto;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.skills__list {
+  row-gap: 1.5rem;
+  padding-left: 2.7rem;
+  @extend %grid;
+}
+.skills__title {
+  font-size: var(--h3-font-size);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mb-0-5);
+}
+.skills__name {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+}
+%skillsPct {
+  display: block;
+  background-color: var(--first-color);
+  height: 5px;
+  border-radius: 0.25rem;
+}
+.skills__bar {
+  height: 5px;
+  border-radius: 0.25rem;
+  background-color: var(--first-color-lighter);
+}
+
+.skills__c {
+  width: 90%;
+  @extend %skillsPct;
+}
+.skills__node {
+  width: 80%;
+  @extend %skillsPct;
+}
+.skills__sqlserver {
+  width: 90%;
+  @extend %skillsPct;
+}
+.skills__phyton {
+  width: 50%;
+  @extend %skillsPct;
+}
+
+.skills__html {
+  width: 90%;
+  @extend %skillsPct;
+}
+.skills__css {
+  width: 80%;
+  @extend %skillsPct;
+}
+
+.skills__js {
+  width: 90%;
+  @extend %skillsPct;
+}
+.skills__react {
+  width: 75%;
+  @extend %skillsPct;
+}
+.skills__git {
+  width: 80%;
+  @extend %skillsPct;
+}
+.skills__azure {
+  width: 65%;
+  @extend %skillsPct;
+}
+.skills__docker {
+  width: 40%;
+  @extend %skillsPct;
+}

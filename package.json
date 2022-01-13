@@ -5,16 +5,21 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@iconscout/react-unicons": "^1.1.6",
+    "axios": "^0.22.0",
     "next": "10.0.6",
     "next-transpile-modules": "^8.0.0",
-    "node-sass": "^5.0.0",
+    "nodemailer": "^6.6.5",
     "react": "17.0.1",
+    "react-autosize-textarea": "^7.1.0",
     "react-dom": "17.0.1",
     "react-spring": "^9.2.4",
-    "sass": "^1.32.6"
+    "sass": "^1.32.6",
+    "swiper": "^6.8.4",
+    "swr": "^1.0.1"
   }
 }

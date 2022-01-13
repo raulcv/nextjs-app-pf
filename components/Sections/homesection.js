@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
-import Link from "next/link";
-import styles from "../../styles/Main.module.scss";
+import CustomLink from "../../components/Navigation/customLink"
+import styles from "../../styles/Home.module.scss";;
+import Animation from "../Card/animation"
 import * as Unicons from '@iconscout/react-unicons';
 
 const HomeSubtitleElement = () => {
@@ -51,32 +52,22 @@ const HomeSubtitleElement = () => {
     </div>
   );
 };
-
 class home extends React.Component {
-constructor(props) {
-  super(props);
-  // this.navMenu = React.createRef();
-  // this.ClickNavToggle = this.ClickNavToggle.bind( this )
-  // this.ClickNavClose = this.ClickNavClose.bind( this )
-}
-ShowHideNavMenu() {
-}
-
-render(){
-  
+render(){  
   return (
+    <>
     <section className={styles.home} id="home">
-      <nav className={styles.home__container}>
+      <div className={styles.home__container}>
         <div className={styles.home__content}>
           <div className={styles.home__social}>
             <a href="https://www.linkedin.com/in/iraulcv/" target="blank" className={styles.home__social_icon}>
               <i><Unicons.UilLinkedinAlt/></i>
             </a>
-            <a href="https://dribbble.com/" target="blank" className={styles.home__social_icon}>
-              <i><Unicons.UilDribbble/></i>
-            </a>
             <a href="https://github.com/raulcv/" target="blank" className={styles.home__social_icon}>
               <i><Unicons.UilGithub/></i>
+            </a>
+            <a href="https://www.instagram.com/iraulcv/" target="blank" className={styles.home__social_icon}>
+              <i><Unicons.UilInstagram/></i>
             </a>
           </div>
           <div className={styles.home__img}>
@@ -93,6 +84,7 @@ render(){
                                     129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                                     -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"></path>
                 <image className={styles.home__blob_img} x="20" y="22" xlinkHref="./img/me-front.png"></image>
+                {/* <Image className={styles.home__blob_img} width="500" height="636" src="/img/me-front.png" layout="responsive"></Image> */}
               </g>
             </svg>
           </div>
@@ -101,28 +93,24 @@ render(){
             </h1>
             <div className={styles.subtitle__container}>
               <HomeSubtitleElement/>
-              {/* <div className={styles.animate__subtitle} id="idSubtitleAnimate">
-                <h3 className={styles.home__subtitle, styles.subtitle__one}>Backend developer</h3>
-                <h3 className={styles.home__subtitle, styles.subtitle__two}>Frontend developer</h3>
-                <h3 className={styles.home__subtitle, styles.subtitle__three}>FullStack developer</h3>
-                <h3 className={styles.home__subtitle, styles.subtitle__four}>Backend developer</h3>        
-              </div> */}
             </div>
             <p className={styles.home__description}>Desarrollo de aplicaciones web con las mejores tecnologías</p>
-            <a href="#contact" className={styles.contactme__button}>Concactame
-              <i className={styles.button__icon}><Unicons.UilMessage/></i>
-            </a>
+            <CustomLink href="/contact" className={styles.normal__button}>Contactame
+              <i className={styles.normal_button__icon}><Unicons.UilMessage/></i>
+            </CustomLink>
          </div>
         </div>
         <div className={styles.home__scroll}>
-            <a href="#about" className={styles.home__scroll_button}>
-              <i className={styles.home__scroll_mouse}><Unicons.UilMouseAlt size='35'/></i>
+            <a href="/#testimonial" className={styles.home__scroll_button}>
+              <i className={styles.home__scroll_mouse}><Unicons.UilMouseAlt/></i>
               <span className={styles.home__scroll_name}>Sroll down</span>
               <i className={styles.home__scroll_arrow}><Unicons.UilArrowDown/></i>
             </a>
           </div>
-      </nav>
+      </div>
     </section>
+    <Animation/>
+    </>
   );
  }
 };

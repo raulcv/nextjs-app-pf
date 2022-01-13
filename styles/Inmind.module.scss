@@ -1,0 +1,67 @@
+@import "variables";
+@import 'reusable';
+.inmind {
+  @extend %section;
+  @media screen and (min-width: 768px) {
+    padding: 3rem 0 2rem;
+  }
+}
+.inmind__container {
+  @extend %container;
+  @extend %grid;
+  
+}
+.inmind__bg {
+  display: grid;
+  // margin: 0;
+  background-color: var(--first-color-second);
+  border-radius: 1rem;
+  padding: var(--mb-1);
+  grid-template-columns: none;
+  column-gap: 3rem;
+  @media screen and (min-width: 568px) {
+    grid-template-columns: 1fr max-content;
+    margin: .5rem;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 1rem;
+  }
+  @media screen and (min-width: 1024px) {
+    margin: 1.5rem;
+  }
+  @media screen and (min-width: 1440px) {
+    margin: 2rem;
+  }
+}
+.inmind__data {
+  padding: var(--mb-0-5);
+  order: 1;
+  text-align: center;
+  @media screen and (min-width: 568px) {
+    order: 0;
+  padding: var(--mb-2);
+  text-align: left;
+  }
+
+}
+.inmind__title, .inmind__description {
+  color: #fff;
+}
+.inmind__title {
+  font-size: var(--h2-font-size);
+  margin-bottom: var(--mb-0-75);
+}
+.inmind__description {
+  text-align: center;
+  margin-bottom: var(--mb-2-5);
+  @media screen and (min-width: 768px) {
+    text-align: initial;
+  }
+}
+.inmind__img {
+  width: 232px;
+  justify-self: center;
+  @media screen and (min-width: 768px) {
+    width: 260px;
+  }
+}
