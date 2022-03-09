@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import CustomLink from "../../components/Navigation/customLink"
+import CustomLink from "../Navigation/customLink"
 import styles from "../../styles/Home.module.scss";;
 import Animation from "../Card/animation"
 import * as Unicons from '@iconscout/react-unicons';
