@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import styles from "../../styles/Contac.module.css";
+import styles from "../../styles/Contact.module.css";
 import * as Unicons from "@iconscout/react-unicons";
 import TextareaAutosize from "react-autosize-textarea";
 import { sendContactMail } from "../../components/Networking/mailApi"  
