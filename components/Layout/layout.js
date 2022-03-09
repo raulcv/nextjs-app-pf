@@ -13,6 +13,7 @@ export default function Layout({ children }) {
         <meta name="description" content="Sitio web de Raul" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <meta property="og:title" content="Principal page" /> */}
+        {/* <meta property="og:title" content="Principal page" /> */}
       </Head>
       <Navigation />
       <main className={styles.main}>{children}</main>
