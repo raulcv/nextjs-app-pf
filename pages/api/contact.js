@@ -36,6 +36,7 @@ export default async (req, res) => {
     Response.Message = "Tiene que igresar su Nombre";
     res.responseCustom = Response;
     console.log("*****************111111**************")
+    res.status(403).send(Response);
     return res;
   } else if (!mail) {
     Response.Id = 0;
@@ -48,11 +49,13 @@ export default async (req, res) => {
     Response.Id = 0;
     Response.Message = "Tiene que igresar el Asunto del correo";
     res.responseCustom = Response;
+    res.status(403).send(Response);
     return;
   } else if (!message) {
     Response.Id = 0;
     Response.Message = "Tiene que escribir un mensaje";
     res.responseCustom = Response;
+    res.status(403).send(Response);
     return;
   } else {
     console.log("Validations: All okay...")

@@ -4,13 +4,12 @@ import Image from "next/image";
 import styles from "../../styles/Animation.module.scss";
 
 const Animation = () =>{
-    
     return (
         <section className={styles.animation}> 
     <div className={styles.animation__container}>
         {/* <section className={styles.point2" id="single__request}> */}
             <div className={styles.animation__data}>
-                <h2 className={styles.animation__title}>Hacer que las respuesta de su Api sean más rápidos</h2>
+                <h2 className={styles.animation__title}>Hacer que las respuesta de sus consultas sean más rápidos y eficientes</h2>
                 <p className={styles.animation__description}>Un lenguaje de consulta desde el lado del cliente que puede reemplazar a las OMR que se utilizan en el lado del servidor, es mucho más óptimo que las APIs
                 tradicionales<br/><br/>
                 Es momento de implementar esta tecnologia a sus Apps para ver el poder que tiene.
