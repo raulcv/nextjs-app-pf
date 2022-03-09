@@ -1,4 +1,4 @@
-import HomeSection from "../components/Sections/homeSection";
+import HomeSection from "../components/Sections/homesection";
 import InmindSection from "../components/Sections/inmindSection";
 import TestimonialSection from "../components/Sections/testimonialSection";
 import Layout from "../components/Layout/Layout";
