@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/layout";
 import styles from "../../styles/Blog.module.scss";
 import useSWR from "swr";
 import Image from "next/image";

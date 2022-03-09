@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Blog.module.scss";
-import Layout from "../../components/Layout/Layout";
+import Layout from "../../components/Layout/layout";
 import BlogComponent from "../../components/Sections/blogSection";
 import useSWR from "swr";
 import {axiosFetcher} from "../../components/Networking/fetcher";

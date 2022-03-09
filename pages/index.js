@@ -1,7 +1,7 @@
 import HomeSection from "../components/Sections/homeSection";
 import InmindSection from "../components/Sections/inmindSection";
 import TestimonialSection from "../components/Sections/testimonialSection";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/layout";
 
 export default function Index() {
   return (

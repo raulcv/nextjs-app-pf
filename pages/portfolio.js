@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/layout";
 import PortfolioSection from "../components/Sections/portfolioSection";
 
 const Porfolio = ()=>{
