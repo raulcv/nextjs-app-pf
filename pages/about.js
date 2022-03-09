@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/layout";
 import AboutSection from "../components/Sections/aboutSection";
 import SkillSection from "../components/Sections/skillsSection";
 import ProgressSection from "../components/Sections/progressSection";
