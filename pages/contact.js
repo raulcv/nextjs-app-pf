@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../components/Layout/Layout";
+import Layout from "../components/Layout/layout";
 import ContactSection from "../components/Sections/contactSection";
 
 const Contact = ()=>{
