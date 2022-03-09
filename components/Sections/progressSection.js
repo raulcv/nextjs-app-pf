@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Progress.module.scss";
 import * as Unicons from "@iconscout/react-unicons";
-import WorkComponent from "../tap/Work"
-import EducationComponent from "../tap/Education"
+import WorkComponent from "../Tap/Work"
+import EducationComponent from "../Tap/Education"
 
 const ProgressTabsAndSections = () => {
   const [progressState, setProgressState] = useState("work");
